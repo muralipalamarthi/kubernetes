@@ -1,21 +1,21 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: mynginx-rc
+  name: myonlineapp-rc
 spec:
   replicas: 3
   selector:
-    app: mynginx
+    app: myonlineapp
     version: 2.6.1
   template:
     metadata:
-      name: mynginx
+      name: myonlineapp
       labels:
-        app: mynginx
+        app: myonlineapp
         version: 2.6.1
     spec:
       containers:
-        - name: mynginx-container
-          image: nginx
+        - name: myonlineapp-container
+          image: maha4iac/myonliineapp:1
           ports:
-            - containerPort: 80
+            - containerPort: 8080
