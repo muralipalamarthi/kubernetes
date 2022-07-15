@@ -4,10 +4,12 @@ metadata:
   name: mynginx-svc
   labels:
     app: mynginx
+    version: 2.6.1
 spec:
   type: NodePort
   selector:
     app: mynginx
+    version: 2.6.1
   ports:
   - port: 80
     targetPort: 8080
