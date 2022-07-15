@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: myalpine-pc
+  name: mynginx-pc
 spec:
-  replicas: 2
+  replicas: 3
   selector:
-    app: myalpine
+    app: mynginx
   template:
     metadata:
-      name: myalpine
+      name: mynginx
       labels:
-        app: myalpine
+        app: mynginx
     spec:
       containers:
-        - name: myalpine-container
-          image: alpine
+        - name: mynginx-container
+          image: nginx
           ports:
             - containerPort: 80
