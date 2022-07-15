@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mynginx-pc
+  name: mynginx
   labels:
     app: mynginx
 spec:
