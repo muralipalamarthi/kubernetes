@@ -1,19 +1,19 @@
 apiVersion: v1
 kind: ReplicationController
 metadata:
-  name: myonlinestore-pc
+  name: myalpine-pc
 spec:
   replicas: 2
   selector:
-    app: myonlinestore
+    app: myalpine
   template:
     metadata:
-      name: myonlinestore
+      name: myalpine
       labels:
-        app: myonlinestore
+        app: myalpine
     spec:
       containers:
-        - name: myonlinestore-container
-          image: maha4iac/mahaonlinestore:2
+        - name: myalpine-container
+          image: alpine
           ports:
-            - containerPort: 8080
+            - containerPort: 80
